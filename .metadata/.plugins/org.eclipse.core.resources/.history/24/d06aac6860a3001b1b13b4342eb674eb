@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assignment" >
+	<test name="Assignment">
+		<classes>
+			<class name="test.java.Book1On1_testcases">
+				<methods>
+
+					<include name="login" />
+					<include name="verifyMyBookingPageTitle" />
+					<include name="verifyBook1On1SuccessMessage" />
+					
+					
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

@@ -1,0 +1,189 @@
+package utilities;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+
+
+public class ActionUtils
+{
+	static ExtentTest logger;
+	static String concatenate = ".";
+	static ITestResult result;
+	private static final int tIMER_WAIT = 200;
+
+	public static void verifyVisibilityOfLocatedElementByName(WebDriver driver, String locator)
+	{
+		new WebDriverWait(driver, tIMER_WAIT).until(ExpectedConditions.visibilityOfElementLocated(By.name(locator)));
+	}
+
+	public static void verifyVisibilityOfLocatedElementByXpath(WebDriver driver, String locator)
+	{
+		new WebDriverWait(driver, tIMER_WAIT).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+	}
+
+	public static void verifyVisibilityOfLocatedElementByLinkText(WebDriver driver, String locator)
+	{
+		new WebDriverWait(driver, tIMER_WAIT).until(ExpectedConditions.visibilityOfElementLocated(By.linkText(locator)));
+	}
+
+	public static void verifyVisibilityOfLocatedElementByClassName(WebDriver driver, String locator)
+	{
+		new WebDriverWait(driver, tIMER_WAIT).until(ExpectedConditions.visibilityOfElementLocated(By.className(locator)));
+	}
+
+	public static void verifyVisibilityOfLocatedElementById(WebDriver driver, String locator)
+	{
+		new WebDriverWait(driver, tIMER_WAIT).until(ExpectedConditions.visibilityOfElementLocated(By.id(locator)));
+	}
+
+	public static void clearAndSendKeysByXpath(WebDriver driver, String pageObject, String value)
+	{
+		// reusablemethods.TestWebDriverMethod.smallSleep();
+		try
+		{
+			
+			driver.findElement(By.xpath(pageObject)).clear();
+			driver.findElement(By.xpath(pageObject)).sendKeys(value);
+		}
+		catch (Exception e)
+		{
+			
+			
+			driver.findElement(By.xpath(pageObject)).sendKeys(value);
+		}
+	}
+	
+     public static void clearText(WebDriver driver, String pageObject) {
+		
+		    driver.findElement(By.xpath(pageObject)).clear();
+		
+	}
+	
+
+	public static void captureScreenshot(WebDriver driver, ExtentTest logger) throws IOException {
+
+
+		String screenshotPath = concatenate + TestCaseStatus.getStepsScreenshot(driver, "InfoScreenshot");
+
+		logger.log(LogStatus.INFO, logger.addScreenCapture(screenshotPath));
+	}
+	
+	
+	public static boolean verifyIsEnabled(WebDriver driver, String PageObject) {
+		
+		
+		boolean CheckStatus=driver.findElement(By.xpath(PageObject)).isEnabled();
+		return CheckStatus;
+	}
+	public static void verifyTextPresent(WebDriver driver, ExtentTest logger, String pageObject, String Text) throws IOException
+	{
+		// reusablemethods.TestWebDriverMethod.smallSleep();
+		//String Status = "Yes";
+		String getText = driver.findElement(By.xpath(pageObject)).getText();
+
+		System.out.println("Text is" + getText);
+		if (getText.equals(Text)) {
+
+			logger.log(LogStatus.PASS, "Text is present");
+			captureScreenshot(driver, logger);
+		} else {
+
+			logger.log(LogStatus.FAIL, "Text---" +Text+"---is not present");
+			captureScreenshot(driver, logger);
+		}
+		
+	}
+
+	public static void clearAndSendKeysByName(WebDriver driver, String pageObject, String value)
+	{
+		// verifyVisibilityOfLocatedElementByName(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.name(pageObject)).clear();
+		driver.findElement(By.name(pageObject)).sendKeys(value);
+	}
+
+	public static void clearAndSendKeysById(WebDriver driver, String pageObject, String value)
+	{
+		// verifyVisibilityOfLocatedElementById(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.id(pageObject)).clear();
+		driver.findElement(By.id(pageObject)).sendKeys(value);
+	}
+
+	public static void clickByClassName(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByClassName(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.className(pageObject)).click();
+	}
+
+	public static void clickByName(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByClassName(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.name(pageObject)).click();
+	}
+
+	public static void clickByLinkText(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByLinkText(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.linkText(pageObject)).click();
+	}
+
+	public static void clickByPartialLinkText(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByLinkText(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		driver.findElement(By.partialLinkText(pageObject)).click();
+	}
+
+	public static void clickByXpath(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByXpath(driver, pageObject);
+		TestWebDriverMethod.setExplicitWait(driver, pageObject);
+		driver.findElement(By.xpath(pageObject)).click();
+	}
+	public static void pressAnyKeyWithControlKey(WebDriver driver, String pageObject, String keyToPress)
+	{
+		// verifyVisibilityOfLocatedElementByXpath(driver, pageObject);
+		TestWebDriverMethod.setExplicitWait(driver, pageObject);
+		driver.findElement(By.xpath(pageObject)).sendKeys(Keys.chord(Keys.CONTROL, keyToPress));
+	}
+	public static void pressBackspace(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByXpath(driver, pageObject);
+		TestWebDriverMethod.setExplicitWait(driver, pageObject);
+		driver.findElement(By.xpath(pageObject)).sendKeys(Keys.chord(Keys.BACK_SPACE));
+	}
+	public static void doubleClickXpathByActions(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByXpath(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		WebElement element = driver.findElement(By.xpath(pageObject));
+		Actions action = new Actions(driver);
+		action.doubleClick(element).build().perform();
+	}
+
+	public static void verifiedByXpathGetText(WebDriver driver, String pageObject)
+	{
+		// verifyVisibilityOfLocatedElementByXpath(driver, pageObject);
+		TestWebDriverMethod.syncSleep();
+		String appStatus = driver.findElement(By.xpath(pageObject)).getText();
+		System.out.println(appStatus);
+	}
+}
+
+

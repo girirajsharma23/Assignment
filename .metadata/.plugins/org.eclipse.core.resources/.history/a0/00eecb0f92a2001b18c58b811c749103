@@ -1,0 +1,18 @@
+package utilities;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestWebDriverMethod {
+	public static WebDriver getUrl(WebDriver driver, String url)
+	{
+		driver.get(url);
+		return driver;
+	}
+	public static WebDriver maximizeBrowser(WebDriver driver)
+	{
+		
+		driver.manage().window().maximize();
+		
+		return driver;
+	}
+}

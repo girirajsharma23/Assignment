@@ -1,0 +1,18 @@
+package utilities;
+
+import org.openqa.selenium.WebDriver;
+
+import com.relevantcodes.extentreports.ExtentTest;
+
+import Book1On1.PageObjects;
+
+public class Login {
+	static WebDriver driver;
+	static ExtentTest logger;
+	public static void login(WebDriver driver) {
+		
+	utilities.ActionUtils.clickByXpath(driver, PageObjects.signInButton);
+	waitForElementTobeVisible(driver, PageObjects.signInText);
+	}
+	
+}

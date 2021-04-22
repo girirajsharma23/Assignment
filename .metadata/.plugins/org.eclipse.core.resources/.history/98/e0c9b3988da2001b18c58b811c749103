@@ -1,0 +1,224 @@
+package utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Properties;
+import java.util.UUID;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class TestCaseStatus {
+	static String reportLocation;
+	static String imageLocation = "images/";
+
+	/*
+	 * public static ExtentReports pass(WebDriver driver, String Message, ExtentTest
+	 * logger, ExtentReports report) { String screenshot_path =
+	 * createScreenshot(driver); String image =
+	 * logger.addScreenCapture(screenshot_path); logger.log(LogStatus.PASS, Message
+	 * + "is Pass", image); report.endTest(logger); return report; }
+	 * 
+	 * public static void fail_StayOnCurrentScreen(WebDriver driver, Exception e,
+	 * String Message, ExtentTest logger, ExtentReports report) throws Exception {
+	 * e.printStackTrace(); String screenshot_path = createScreenshot(driver);
+	 * String image = logger.addScreenCapture(screenshot_path);
+	 * logger.log(LogStatus.FAIL, Message + "is Fail", image);
+	 * //logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
+	 * report.endTest(logger); }
+	 */
+
+	// static Properties prop = new Properties();
+
+	public static String getFailScreenshot(WebDriver driver, String screenshotName) {
+
+		 String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "ExtentReports/FailedTestsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+	}
+	
+	public static String getStepsScreenshot(WebDriver driver, String screenshotName) {
+
+		 String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "ExtentReports/StepsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+	}
+
+	public static String getPassScreenshot(WebDriver driver, String screenshotName) {
+
+		String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "ExtentReports/PassTestsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+	}
+		public static String getSkipScreenshot(WebDriver driver, String screenshotName) {
+
+			String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+			// utilities.BeforeTest.beforeTestSetup(prop);
+			/*
+			 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+			 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+			 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+			 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+			 */
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+			String destination = "./" + "ExtentReports/SkipTestsScreenshots/" + screenshotName + dateName + ".png";
+			File finalDestination = new File(destination);
+			try {
+				FileUtils.copyFile(scrFile, finalDestination);
+			} catch (IOException e) {
+			}
+			return destination;
+		
+		/*
+		 * try { FileUtils.copyFile(scrFile, new File(prop.getProperty("ExtentReports")
+		 * + ".html" + imageLocation + uuid + ".png")); } catch (IOException e) { }
+		 * return "./" + prop.getProperty("ExtentReportReferenceImages") + ".html" +
+		 * imageLocation + uuid + ".png";
+		 */
+		
+		
+	}
+	
+	
+	///////////////////////////////////////////////////Sanity Reports//////////////////////////////////
+	
+
+
+
+
+
+	public static String getFailScreenshotSanity(WebDriver driver, String screenshotName) {
+
+		 String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "SanityReports/FailedTestsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+	}
+	
+	public static String getStepsScreenshotSanity(WebDriver driver, String screenshotName) {
+
+		 String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "SanityReports/StepsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+	}
+
+	public static String getPassScreenshotSanity(WebDriver driver, String screenshotName) {
+
+		String dateName = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+
+		// utilities.BeforeTest.beforeTestSetup(prop);
+		/*
+		 * File file = new File("./Data.properties"); FileInputStream fileInput = null;
+		 * try { fileInput = new FileInputStream(file); } catch (FileNotFoundException
+		 * e) { e.printStackTrace(); } try { prop.load(fileInput); } catch (IOException
+		 * e) { e.printStackTrace(); } UUID uuid = UUID.randomUUID();
+		 */
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String destination = "./" + "SanityReports/PassTestsScreenshots/" + screenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		try {
+			FileUtils.copyFile(scrFile, finalDestination);
+		} catch (IOException e) {
+		}
+		return destination;
+		
+		/*
+		 * try { FileUtils.copyFile(scrFile, new File(prop.getProperty("ExtentReports")
+		 * + ".html" + imageLocation + uuid + ".png")); } catch (IOException e) { }
+		 * return "./" + prop.getProperty("ExtentReportReferenceImages") + ".html" +
+		 * imageLocation + uuid + ".png";
+		 */
+		
+		
+	}
+	
+	
+}

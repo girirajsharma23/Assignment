@@ -1,0 +1,108 @@
+package test.java;
+
+import Book1On1.PageObjects;
+import Book1On1.Steps;
+import org.testng.annotations.Test;
+
+import utilities.ActionUtils;
+import utilities.BrowserSelection;
+import utilities.Login;
+import utilities.TestWebDriverMethod;
+import utilities.*;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeTest;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+
+public class Book1On1_testcases extends Steps {
+
+	private static String timeStamp = null;
+	static WebDriver driver;
+	static ExtentReports report;
+	static ExtentTest logger;
+	static Properties prop = new Properties();
+	static Properties rootprop = new Properties();
+	static String reportLocation = prop.getProperty("ExtentReports");
+	static String imageLocation = "images/";
+	TestCaseStatus results=new  TestCaseStatus();
+	
+///////////////////////////////////////Before Test Setup//////////////////////////////////////////////////////////	
+	@BeforeTest
+	public void setup() throws Exception {
+		utilities.BeforeTest.beforeTestSetup(prop);
+		timeStamp = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+		report = new ExtentReports(prop.getProperty("ExtentReports") + timeStamp + ".html");
+		String browserName = BrowserSelection.getParameter("browser");
+		driver = BrowserSelection.browser(driver, browserName);
+		utilities.BeforeTest.postBrowserLaunch(driver, prop);
+
+	}
+
+	@Test
+	public void login() throws Exception {
+		try {
+		logger = report.startTest("validating login functionality");
+		loginSteps(driver, logger);
+		}
+		catch (Exception e) {
+		captureScreenshot(driver, logger);
+		logger.log(LogStatus.FAIL, "Login has been ailed");		
+			
+		}
+	}
+	
+	@AfterMethod
+	public void getResult(ITestResult result) throws IOException {
+		results.getResult(result, driver, logger);
+		/*String concatenate = ".";
+		if (result.getStatus() == ITestResult.FAILURE) {
+			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
+			logger.log(LogStatus.FAIL, "Test Case Failed due to " + result.getThrowable());
+			// To capture screenshot path and store the path of the screenshot in the string
+			// "screenshotPath"
+			// We do pass the path captured by this mehtod in to the extent reports using
+			// "logger.addScreenCapture" method.
+			String screenshotPath = concatenate + TestCaseStatus.getFailScreenshot(driver, result.getName());
+			// To add it in the extent report
+			logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));
+		}
+
+		else if (result.getStatus() == ITestResult.SKIP) {
+			logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
+		}
+
+		else if (result.getStatus() == ITestResult.SUCCESS) {
+			logger.log(LogStatus.PASS, "Test Case Passed is " + result.getName());
+			String screenshotPath = concatenate + TestCaseStatus.getPassScreenshot(driver, result.getName());
+			logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
+
+			// logger.log(LogStatus.FAIL, "Test Case Passed is "+result.getThrowable());
+		}
+
+	}*/
+	
+	@AfterTest
+	public static void quit() {
+		report.flush();
+		//recorder.stop();
+		// driver.get(prop.getProperty("ExtentReports") + timeStamp + ".html");
+	}
+}

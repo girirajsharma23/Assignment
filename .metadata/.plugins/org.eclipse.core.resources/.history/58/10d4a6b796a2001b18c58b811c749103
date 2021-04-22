@@ -1,0 +1,73 @@
+package testcases;
+
+import Book1On1.PageObjects;
+import Book1On1.Steps;
+import org.testng.annotations.Test;
+
+import utilities.ActionUtils;
+import utilities.BrowserSelection;
+import utilities.Login;
+import utilities.TestWebDriverMethod;
+import utilities.*;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeTest;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+public class Book1On1_testcases extends Steps {
+
+	
+	private static String timeStamp = null;
+	static WebDriver driver;
+	static ExtentReports report;
+	static ExtentTest logger;
+	static Properties prop = new Properties();
+	static Properties rootprop = new Properties();
+	static String reportLocation = prop.getProperty("ExtentReports");
+	static String imageLocation = "images/";
+	
+	ActionUtils actionUtil=new ActionUtils();
+	DataProviderClass data=new DataProviderClass();
+
+///////////////////////////////////////Before Test Setup//////////////////////////////////////////////////////////	
+	@BeforeTest
+	public void setup() throws Exception {
+		utilities.BeforeTest.beforeTestSetup(prop);
+		timeStamp = new SimpleDateFormat("dd_MM_yyyy__HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+		report = new ExtentReports(prop.getProperty("ExtentReports") + timeStamp + ".html");
+		String browserName = BrowserSelection.getParameter("browser");
+		driver = BrowserSelection.browser(driver, browserName);
+		utilities.BeforeTest.postBrowserLaunch(driver, prop);
+	
+	}
+	
+	@Test
+	public void login(String username, String password) throws Exception {
+		logger = report.startTest("validating login functionality");
+				
+			
+			actionUtil.clickByXpath(driver, PageObjects.signInButton);
+			actionUtil.waitForElementTobeVisible(driver, PageObjects.signInText);
+			actionUtil.clearAndSendKeysByXpath(driver, PageObjects.userNameTextBox, data.username);
+			actionUtil.clearAndSendKeysByXpath(driver, PageObjects.userNameTextBox, data.username);
+		}
+	}
+

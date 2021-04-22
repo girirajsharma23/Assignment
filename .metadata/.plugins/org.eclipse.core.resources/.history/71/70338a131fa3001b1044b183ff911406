@@ -1,0 +1,117 @@
+package Book1On1;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import utilities.ActionUtils;
+import utilities.DataProviderClass;
+
+public class Actions extends ActionUtils {
+
+	DataProviderClass data = new DataProviderClass();
+
+	public void clickSignInbuttonHomePage(WebDriver driver) {
+
+		clickByXpath(driver, PageObjects.signInButton);
+	}
+
+	public void enterUsername(WebDriver driver) {
+
+		clearAndSendKeysByXpath(driver, PageObjects.userNameTextBox, data.username);
+	}
+
+	public void enterPassword(WebDriver driver) {
+
+		clearAndSendKeysByXpath(driver, PageObjects.passwordTextBox, data.password);
+	}
+
+	public void clickSignInButton(WebDriver driver) {
+
+		clickByXpath(driver, PageObjects.signInButtonOnLoginPage);
+	}
+
+	public void verifyTitle(WebDriver driver) {
+
+		String getTitle = driver.getTitle();
+		Assert.assertEquals(getTitle, "My Bookings | Gleantapbuzz");
+	}
+
+	public void waitForElement(WebDriver driver, String locator) {
+
+		waitForElementTobeVisible(driver, locator);
+	}
+
+	public void clickBook1On1(WebDriver driver) {
+
+		clickByXpath(driver, PageObjects.book1On1Link);
+	}
+
+	public void clickOnJohnFoster(WebDriver driver) {
+
+		clickByXpath(driver, PageObjects.johnForster);
+	}
+
+	public void clickOnDate(WebDriver driver) {
+
+		clickByXpath(driver, PageObjects.date);
+	}
+
+	public void clickOnTime(WebDriver driver) {
+		
+		clickByXpath(driver, PageObjects.time);
+	}
+	
+	
+	String DateSelected=null;
+	String slotTime=null;
+public void selectAvailableSlot(WebDriver driver) {
+	
+		List<WebElement> calendarDates=driver.findElements(By.xpath("(//a[@data-id])"));
+		List<WebElement> morningSlots=driver.findElements(By.xpath("(//div[text()='Morning'])"));
+		int slotAvailable=0;
+		
+		//////////Loop for iterating the date row////////////
+		
+		for(int dateIndex=1;dateIndex<=calendarDates.size();dateIndex++) {
+			
+		clickByXpath(driver, "(//a[@data-id])[" + dateIndex + "]");  ////div[contains(@data-date,'22')]
+		
+		 DateSelected=driver.findElement(By.xpath("(//a[@data-id])[" + dateIndex + "]/span[1]")).getText();
+			
+		//////////////Loop for iterating the Morning slot column after selecting the first date available///////////////
+		 
+			for(int timeIndex=1; timeIndex<=morningSlots.size();timeIndex++ ) {
+				String status=driver.findElement(By.xpath("(//div[contains(@data-date,'" + DateSelected + "')])[" + timeIndex + "]")).getAttribute("class");
+				
+				if(status.contains("book_trainer_slot")) {
+				clickByXpath(driver, "(//div[contains(@data-date,'" + DateSelected + "')])[" + timeIndex + "]");
+				slotTime=driver.findElement(By.xpath("(//div[contains(@data-date,'" + DateSelected + "')])[" + timeIndex + "]")).getText();
+				slotAvailable++;
+				System.out.println("slot is available");
+				break;
+				}
+				
+				else {
+					System.out.println("Slot is already booked");
+				}
+			}
+		
+			if(slotAvailable==1) {
+				break;
+			}
+		}
+		
+		System.out.println("date: "+DateSelected +" Time slot: "+slotTime);
+		
+		
+	}
+	public String getSuccessMessage(WebDriver driver) {
+		
+		String successMessage=driver.findElement(By.xpath("")).getText();
+		return successMessage;
+	}
+}

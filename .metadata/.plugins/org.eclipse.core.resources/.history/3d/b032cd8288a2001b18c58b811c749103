@@ -1,0 +1,39 @@
+package utilities;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+
+
+public class BeforeTest
+{
+	
+	
+	public static void beforeTestSetup(Properties prop)
+	{
+		FileReader.readFile("./RootData.properties", prop);
+		/* FileReader.readFile("./RootData1.properties", Rootprop); */
+	}
+
+	public static void postBrowserLaunch(WebDriver driver, Properties prop) throws ATUTestRecorderException
+	{
+		
+		utilities.BeforeTest.beforeTestSetup(prop);
+		TestWebDriverMethod.maximizeBrowser(driver);
+		//driver.get("https://sit.myrushmoreloan.com");
+		//TestWebDriverMethod.navigateUrl("https://sit.myrushmoreloan.com");
+		System.out.println("URL enter");
+		System.out.println(prop.getProperty("URL"));
+		TestWebDriverMethod.getUrl(driver, prop.getProperty("URL"));
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+	}
+}
+
+
+
+

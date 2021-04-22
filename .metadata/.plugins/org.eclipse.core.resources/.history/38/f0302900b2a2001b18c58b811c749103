@@ -1,0 +1,12 @@
+package Book1On1;
+
+public class PageObjects {
+
+	
+	public static String signInButton="(//a[text()='Sign In'])[2]";
+	public static String signInText="//div[text()='Sign in']";
+	public static String userNameTextBox="(//input[@id='gl_username'])[1]";
+	public static String passwordTextBox="(//input[@id='gl_password'])[1]";
+	public static String signInButtonOnLoginPage="(//input[@value='Sign in'])[1]";
+	public static String book1On1Link="//span[text()='Book a 1-on-1']";
+}

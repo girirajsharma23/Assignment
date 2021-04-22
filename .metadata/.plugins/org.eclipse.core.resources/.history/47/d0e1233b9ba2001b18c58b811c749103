@@ -1,0 +1,24 @@
+package Book1On1;
+
+import org.openqa.selenium.WebDriver;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+import utilities.ActionUtils;
+import utilities.DataProviderClass;
+
+public class Steps extends Actions {
+
+	
+	ActionUtils actionUtil = new ActionUtils();
+	DataProviderClass data = new DataProviderClass();
+
+	public void loginSteps(WebDriver driver) {
+		
+		actionUtil.clickByXpath(driver, PageObjects.signInButton);
+		actionUtil.waitForElementTobeVisible(driver, PageObjects.signInText);
+		actionUtil.clearAndSendKeysByXpath(driver, PageObjects.userNameTextBox, data.username);
+		actionUtil.clearAndSendKeysByXpath(driver, PageObjects.passwordTextBox, data.password);
+	}
+}

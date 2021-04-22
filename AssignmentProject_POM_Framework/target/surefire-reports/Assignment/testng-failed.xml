@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Assignment]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Assignment(failed)" verbose="0">
+    <classes>
+      <class name="test.java.Book1On1_testcases">
+        <methods>
+          <include name="login"/>
+          <include name="quit"/>
+          <include name="setup"/>
+          <include name="getResult"/>
+          <include name="verifyBook1On1SuccessMessage"/>
+        </methods>
+      </class> <!-- test.java.Book1On1_testcases -->
+    </classes>
+  </test> <!-- Assignment(failed) -->
+</suite> <!-- Failed suite [Assignment] -->

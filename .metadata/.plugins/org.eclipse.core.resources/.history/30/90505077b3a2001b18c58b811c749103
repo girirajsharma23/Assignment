@@ -1,0 +1,10 @@
+package utilities;
+
+public class DataProviderClass {
+
+	
+	
+	public String username="shubham@gleantap.com";
+	public String password="Test1234";
+	public static String date="0422"; //Enter date in format "mmdd"
+}

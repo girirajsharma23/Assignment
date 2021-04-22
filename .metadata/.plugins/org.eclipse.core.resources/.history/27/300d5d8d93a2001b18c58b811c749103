@@ -1,0 +1,7 @@
+package Book1On1;
+
+public class PageObjects {
+
+	
+	static String signInButton="(//a[text()='Sign In'])[2]";
+}

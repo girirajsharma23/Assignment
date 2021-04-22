@@ -1,0 +1,13 @@
+package Book1On1;
+import org.openqa.selenium.WebDriver;
+
+import utilities.ActionUtils;
+public class Actions extends ActionUtils  {
+
+	
+	
+	public void clickSignInbuttonHomePage(WebDriver driver) {
+		
+		clickByXpath(driver, PageObjects.signInButton);
+	}
+}

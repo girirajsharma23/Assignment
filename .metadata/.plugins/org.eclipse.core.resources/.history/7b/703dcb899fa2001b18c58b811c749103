@@ -1,0 +1,20 @@
+package Book1On1;
+import org.openqa.selenium.WebDriver;
+
+import utilities.ActionUtils;
+import utilities.DataProviderClass;
+public class Actions extends ActionUtils  {
+
+	DataProviderClass data = new DataProviderClass();
+	
+	public void clickSignInbuttonHomePage(WebDriver driver) {
+		
+		clickByXpath(driver, PageObjects.signInButton);
+	}
+	
+	
+	public void enterUsername(WebDriver driver) {
+		
+		clearAndSendKeysByXpath(driver, PageObjects.userNameTextBox, data.username);
+	}
+}

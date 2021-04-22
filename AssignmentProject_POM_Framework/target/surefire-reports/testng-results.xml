@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-22T12:47:13Z" name="Assignment" finished-at="2021-04-22T12:48:52Z" duration-ms="99068">
+    <groups>
+    </groups>
+    <test started-at="2021-04-22T12:47:13Z" name="Assignment" finished-at="2021-04-22T12:48:52Z" duration-ms="99068">
+      <class name="test.java.Book1On1_testcases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:47:13Z" name="setup" finished-at="2021-04-22T12:48:25Z" duration-ms="72077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:25Z" name="login" finished-at="2021-04-22T12:48:30Z" duration-ms="4536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:30Z" name="getResult" finished-at="2021-04-22T12:48:33Z" duration-ms="3093" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Book1On1_testcases.login()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="verifyMyBookingPageTitle()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:33Z" name="verifyMyBookingPageTitle" finished-at="2021-04-22T12:48:33Z" depends-on-methods="test.java.Book1On1_testcases.login" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMyBookingPageTitle -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:33Z" name="getResult" finished-at="2021-04-22T12:48:33Z" duration-ms="328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMyBookingPageTitle status=SUCCESS method=Book1On1_testcases.verifyMyBookingPageTitle()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="verifyBook1On1SuccessMessage()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:33Z" name="verifyBook1On1SuccessMessage" finished-at="2021-04-22T12:48:41Z" depends-on-methods="test.java.Book1On1_testcases.login" duration-ms="7846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBook1On1SuccessMessage -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:41Z" name="getResult" finished-at="2021-04-22T12:48:41Z" duration-ms="389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyBook1On1SuccessMessage status=SUCCESS method=Book1On1_testcases.verifyBook1On1SuccessMessage()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="verifySlotOnMyBookings()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:41Z" name="verifySlotOnMyBookings" finished-at="2021-04-22T12:48:50Z" depends-on-methods="test.java.Book1On1_testcases.login" duration-ms="8203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySlotOnMyBookings -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:50Z" name="getResult" finished-at="2021-04-22T12:48:50Z" duration-ms="279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySlotOnMyBookings status=SUCCESS method=Book1On1_testcases.verifySlotOnMyBookings()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:test.java.Book1On1_testcases@1da2cb77]" started-at="2021-04-22T12:48:50Z" name="quit" finished-at="2021-04-22T12:48:52Z" duration-ms="2300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- test.java.Book1On1_testcases -->
+    </test> <!-- Assignment -->
+  </suite> <!-- Assignment -->
+</testng-results>
