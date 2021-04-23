@@ -1906,3 +1906,80 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2021-04-22 19:54:47,883 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
 2021-04-22 19:54:47,886 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-04-22 19:54:47,887 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:08:48,298 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:08:48,298 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:08:48,299 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:08:48,299 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:11:09,113 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:11:09,114 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:11:09,114 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:11:09,114 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:13:50,231 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:13:50,232 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:13:50,234 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:13:50,234 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:14:30,869 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:14:30,869 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:14:30,870 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:14:30,871 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:23:17,998 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:23:17,998 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:23:18,000 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:23:18,000 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:24:05,933 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:24:05,934 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:24:05,935 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:24:05,935 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:25:48,864 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:25:48,864 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:25:48,865 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:25:48,865 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:27:45,445 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:27:45,445 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:27:45,446 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:27:45,446 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:30:00,125 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:30:00,125 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:30:00,127 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:30:00,127 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:35:52,407 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:35:52,407 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:35:52,408 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:35:52,408 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:40:46,292 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:40:46,292 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:40:46,293 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:40:46,293 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 20:41:17,594 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-22 20:41:38,012 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:41:38,012 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 20:41:38,014 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 20:41:38,015 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:11:24,624 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:11:24,625 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:11:24,626 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:11:24,627 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:13:52,560 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:13:52,560 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:13:52,562 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:13:52,563 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:15:16,991 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:15:16,992 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:15:16,993 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:15:16,993 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:29:52,076 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:29:52,076 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:29:52,078 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:29:52,078 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:33:29,112 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:33:29,112 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:33:29,114 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:33:29,114 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:41:34,114 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:41:34,115 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:41:34,116 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:41:34,116 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources
+2021-04-22 21:45:13,976 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:45:13,976 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\main\resources
+2021-04-22 21:45:13,979 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 21:45:13,979 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\GSharma\eclipse-workspace\Assignment\AssignmentProject_POM_Framework\src\test\resources

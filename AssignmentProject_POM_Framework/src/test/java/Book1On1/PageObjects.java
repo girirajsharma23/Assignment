@@ -21,5 +21,7 @@ public class PageObjects {
 	public static String morningColumn="(//div[text()='Morning'])[1]//following::div[contains(@class,'cancel-class')][1]";
 	public static String myAccountbutton="//a[text()='My Account']";
 	public static String myBookingsLink="//span[text()='My Bookings']";
+	
 
 }
+

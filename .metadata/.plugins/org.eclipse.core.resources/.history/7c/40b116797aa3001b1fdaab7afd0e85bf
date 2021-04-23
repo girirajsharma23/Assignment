@@ -1,0 +1,18 @@
+package test.java;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Testcase {
+	static WebDriver driver;
+	
+	public void testSetup() {
+		
+	WebDriverManager.chromedriver().setup();
+	driver= new ChromeDriver();
+	
+	}
+}
+

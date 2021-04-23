@@ -1,0 +1,111 @@
+package test.java;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import utilities.DataProviderClass;
+
+public class Testcase {
+	static WebDriver driver;
+	String dateToVerify=null;
+	@BeforeTest
+	public void testSetup() {
+		
+	WebDriverManager.chromedriver().setup();
+	driver= new ChromeDriver();
+	driver.get("https://virtual.gleantap.org/");
+	}
+	
+	@Test
+	public void login() {
+		
+		driver.findElement(By.xpath("(//a[text()='Sign In'])[2]")).click();
+		driver.findElement(By.xpath("(//input[@id='gl_username'])[1]")).sendKeys("shuham@gleantap.com");
+		driver.findElement(By.xpath("(//input[@id='gl_password'])[1]")).sendKeys("Test1234");
+		driver.findElement(By.xpath("(//input[@value='Sign in'])[1]")).click();
+		
+	}
+	
+	@Test
+	public void verifyTitle() {
+		
+		String getTitle = driver.getTitle();
+		Assert.assertEquals(getTitle, "My Bookings | Gleantapbuzz");
+	}
+	
+	@Test
+	
+	public void verifyBook1On1SuccessMessage() {
+		
+		driver.findElement(By.xpath("//span[text()='Book a 1-on-1")).click();
+		driver.findElement(By.xpath("//a[text()='John Foster']")).click();
+		
+		List<WebElement> calendarDates = driver.findElements(By.xpath("(//a[@data-id])"));
+		List<WebElement> morningSlots = driver.findElements(By.xpath("(//div[text()='Morning'])"));
+		int slotAvailable = 0;
+
+		////////// Loop for iterating the date row////////////
+
+		for (int dateIndex = 1; dateIndex <= calendarDates.size(); dateIndex++) {
+
+			driver.findElement(By.xpath("(//a[@data-id])[" + dateIndex + "]")); //// div[contains(@data-date,'22')]
+
+			String dateSelected = driver.findElement(By.xpath("(//a[@data-id])[" + dateIndex + "]/span[1]")).getText();
+			dateToVerify=driver.findElement(By.xpath("(//a[@data-id])[" + dateIndex + "]")).getText();
+			////////////// Loop for iterating the Morning slot column///////////////
+
+			for (int slotIndex = 1; slotIndex <= morningSlots.size(); slotIndex++) {
+
+				String status = driver
+						.findElement(
+								By.xpath("(//div[contains(@data-date,'" + dateSelected + "')])[" + slotIndex + "]"))
+						.getAttribute("class");
+
+				if (status.contains("book_trainer_slot")) {
+					clickByXpath(driver, "(//div[contains(@data-date,'" + dateSelected + "')])[" + slotIndex + "]");
+					slotTime = driver
+							.findElement(
+									By.xpath("(//div[contains(@data-date,'" + dateSelected + "')])[" + slotIndex + "]"))
+							.getText();
+					slotAvailable++;
+					System.out.println("slot is available");
+					break;
+				}
+
+				else {
+					System.out.println("Slot is already booked");
+				}
+			}
+
+			if (slotAvailable == 1) {
+				break;
+			}
+		}
+
+		System.out.println("date: " + dateToVerify + " Time slot: " + slotTime);
+	}
+}
+
+static DataProviderClass dat2 = new DataProviderClass();
+public static String signInButton="(//a[text()='Sign In'])[2]";
+public static String signInText="//div[text()='Sign in']";
+public static String userNameTextBox="(//input[@id='gl_username'])[1]";
+public static String passwordTextBox="(//input[@id='gl_password'])[1]";
+public static String signInButtonOnLoginPage="(//input[@value='Sign in'])[1]";
+public static String book1On1Link="//span[text()='Book a 1-on-1']";
+public static String johnForster="//a[text()='John Foster']";
+public static String date = "//option[@value='" + dat2.date + "']";
+static String date1="tab"+dat2.date;
+public static String time="//div[@id='" + date1 + "']/div[1]/div[1]/div[1]/div[1]//following::div[1]/label[1]";
+public static String dateRow="(//a[@data-id])[1]";
+public static String morningColumn="(//div[text()='Morning'])[1]//following::div[contains(@class,'cancel-class')][1]";
+public static String myAccountbutton="//a[text()='My Account']";
+public static String myBookingsLink="//span[text()='My Bookings']";
